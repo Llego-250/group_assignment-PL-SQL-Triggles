@@ -85,29 +85,29 @@ This web interface demonstrates the functionality of the PL/SQL queries and trig
 ## Project Structure
 ```
 group_assignment-PL-SQL-Triggles/
-├── question3/                    # Question 3: Security Monitoring
+├── question3/                              # Question 3: Security Monitoring
 │   ├── schema/
-│   │   └── create_tables.sql     # LOGIN_AUDIT & SECURITY_ALERTS tables
+│   │   └── create_tables.sql               # LOGIN_AUDIT & SECURITY_ALERTS tables
 │   ├── triggers/
-│   │   └── check_suspicious_login.sql  # Suspicious login trigger
+│   │   └── check_suspicious_login.sql      # Suspicious login trigger
 │   └── test/
-│       └── check_activity.sql    # Test scripts
-├── question4/                    # Question 4: Hospital Management
+│       └── check_activity.sql              # Test scripts
+├── question4/                              # Question 4: Hospital Management
 │   ├── schema/
-│   │   └── create_tables.sql     # PATIENTS & DOCTORS tables
+│   │   └── create_tables.sql               # PATIENTS & DOCTORS tables
 │   ├── packages/
-│   │   ├── hospital_mgmt.sql     # Package specification
-│   │   └── hospital_mgmt_body.sql # Package body
+│   │   ├── hospital_mgmt.sql               # Package specification
+│   │   └── hospital_mgmt_body.sql          # Package body
 │   └── test/
-│       └── test_package.sql      # Package test scripts
-├── interface/                    # Web Interface Demo
-│   ├── index.html               # Main interface
-│   ├── styles.css               # Styling and layout
-│   ├── script.js                # JavaScript functionality
-│   ├── screenshots/             # Implementation screenshots
-│   └── README.md                # Interface documentation
-├── screenshots/                  # Original screenshots
-│   ├── Interface/               # Interface screenshots
-│   └── *.png, *.jpg            # Implementation screenshots
-└── README.md                    # This documentation
+│       └── test_package.sql                # Package test scripts
+├── interface/                              # Web Interface Demo
+│   ├── index.html                          # Main interface
+│   ├── styles.css                          # Styling and layout
+│   ├── script.js                           # JavaScript functionality
+│   ├── screenshots/                        # Implementation screenshots
+│   └── README.md                           # Interface documentation
+├── screenshots/                            # Original screenshots
+│   ├── Interface/                          # Interface screenshots
+│   └── *.png, *.jpg                        # Implementation screenshots
+└── README.md                               # This documentation
 ```
