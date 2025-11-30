@@ -1,9 +1,9 @@
 ## Team Members:
-1. Abanenatwe Thierry 28832<br>                                                                                              
-2.Hirwa Haguma Hubert 28310<br>                                                                                   
-3.Arinatwe Hope 28313<br>
-4.Aze Solide 27396<br>
-5.Ishema Manzi Bernard 28962<br>                                                                                                 
+1.Abanenatwe Thierry 28832                                                                            
+2.Hirwa Haguma Hubert 28310                                                                                   
+3.Arinatwe Hope 28313
+4.Aze Solide 27396
+5.Ishema Manzi Bernard 28962
 
 
                                       
