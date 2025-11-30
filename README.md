@@ -1,10 +1,9 @@
 ## Team Members(Names -> ID -> Username)
-| 1. Abanenatwe Thierry         28832         (@AThierry8)   |
-| 2. Hirwa Haguma Hubert        28310         (@hirhubert07) |
-| 3. Arinatwe Hope              28313         (Arina915)     |
-| 4. Aze Solide                 27396         (@Llego-250)   |
-| 5. Ishema Manzi Bernard       28962         (Ishema-50)    |
- ============================================================
+1. Abanenatwe Thierry         28832         (@AThierry8)
+2. Hirwa Haguma Hubert        28310         (@hirhubert07)
+3. Arinatwe Hope              28313         (Arina915)
+4. Aze Solide                 27396         (@Llego-250)
+5. Ishema Manzi Bernard       28962         (Ishema-50)
 
 ## Question 3: Suspicious Login Monitoring (Advanced Triggers)
 Overview: The goal was to monitor user logins and issue an immediate security alert if any user failed to log in more than two times in the same day.
