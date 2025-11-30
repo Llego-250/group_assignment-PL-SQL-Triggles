@@ -5,9 +5,7 @@
 4. Aze Solide 27396 (@Llego-250)
 5. Ishema Manzi Bernard 28962
 
-
-                                      
-## Questin 3: Suspicious Login Monitoring (Advanced Triggers)
+## Question 3: Suspicious Login Monitoring (Advanced Triggers)
 Overview: The goal was to monitor user logins and issue an immediate security alert if any user failed to log in more than two times in the same day.
 
 Implementation:
@@ -17,14 +15,12 @@ Solution: A single AFTER INSERT trigger (trg_CheckSuspiciousLogin) was created o
 <img width="959" height="504" alt="question3 a" src="https://github.com/user-attachments/assets/15071f46-45a2-4f98-a23a-f54713095e1c" />
 
 Logic: The trigger checked if the inserted record's status was 'FAILED'. If so, it performed a COUNT(*) query on LOGIN_AUDIT for the same user on the current day (TRUNC(SYSTIMESTAMP)).
-Alerting: If the count was 
-≥
-3
-, the trigger, operating under PRAGMA AUTONOMOUS_TRANSACTION, inserted a new record into SECURITY_ALERTS and executed an independent COMMIT.
+Alerting: If the count was ≥3, the trigger, operating under PRAGMA AUTONOMOUS_TRANSACTION, inserted a new record into SECURITY_ALERTS and executed an independent COMMIT.
 Optional: A second trigger was outlined to demonstrate how to use UTL_MAIL to send an external email notification whenever a record was inserted into SECURITY_ALERTS. 
 <img width="992" height="895" alt="question3 b" src="https://github.com/user-attachments/assets/db56fc38-a32a-492e-a706-65fb9eb42aac" />
 <img width="975" height="695" alt="question3 b1" src="https://github.com/user-attachments/assets/402b419c-34b4-457b-aa92-b44bc2ffccf3" />
-## Question 4:Hospital Management (Bulk Processing)
+
+## Question 4: Hospital Management (Bulk Processing)
 Overview: The requirement was to design a package for efficient patient management, utilizing collections and bulk processing for high-volume data operations.
 
 Implementation:
@@ -82,33 +78,36 @@ This web interface demonstrates the functionality of the PL/SQL queries and trig
 - `count_admitted`: Count admitted patients
 - `show_all_patients`: Display all patient records
 
-## Screenshots
-
-### Question 3: Security Monitoring Implementation
-![Question 3 Schema](screenshots/question3%20a.png)
-![Question 3 Trigger Implementation](screenshots/question3_a1.png)
-![Question 3 Testing](screenshots/question3_a2.png)
-
-### Question 4: Hospital Management Implementation
-![Question 4 Schema](screenshots/question4%20a.jpg)
-![Question 4 Package Specification](screenshots/question4_a.png)
-![Question 4 Package Body 1](screenshots/question4_b1.png)
-![Question 4 Package Body 2](screenshots/question4_b2.png)
-
 ### Interface Screenshots
 ![Security Monitoring Interface](screenshots/Interface/Question3.png)
 ![Hospital Management Interface](screenshots/Interface/Question4.png)
 
-## Files Structure
+## Project Structure
 ```
-interface/
-├── index.html      # Main interface
-├── styles.css      # Styling and layout
-├── script.js       # JavaScript functionality
-├── screenshots/    # Implementation screenshots
-└── README.md       # This documentation
+group_assignment-PL-SQL-Triggles/
+├── question3/                    # Question 3: Security Monitoring
+│   ├── schema/
+│   │   └── create_tables.sql     # LOGIN_AUDIT & SECURITY_ALERTS tables
+│   ├── triggers/
+│   │   └── check_suspicious_login.sql  # Suspicious login trigger
+│   └── test/
+│       └── check_activity.sql    # Test scripts
+├── question4/                    # Question 4: Hospital Management
+│   ├── schema/
+│   │   └── create_tables.sql     # PATIENTS & DOCTORS tables
+│   ├── packages/
+│   │   ├── hospital_mgmt.sql     # Package specification
+│   │   └── hospital_mgmt_body.sql # Package body
+│   └── test/
+│       └── test_package.sql      # Package test scripts
+├── interface/                    # Web Interface Demo
+│   ├── index.html               # Main interface
+│   ├── styles.css               # Styling and layout
+│   ├── script.js                # JavaScript functionality
+│   ├── screenshots/             # Implementation screenshots
+│   └── README.md                # Interface documentation
+├── screenshots/                  # Original screenshots
+│   ├── Interface/               # Interface screenshots
+│   └── *.png, *.jpg            # Implementation screenshots
+└── README.md                    # This documentation
 ```
-
-
-
-
