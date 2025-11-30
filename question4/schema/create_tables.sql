@@ -16,7 +16,7 @@ CREATE TABLE DOCTORS (
 );
 /
 -- Add some initial data
-INSERT INTO DOCTORS (doctor_id, name, specialty) VALUES (1, 'Dr. Aris', 'Cardiology');
-INSERT INTO DOCTORS (doctor_id, name, specialty) VALUES (2, 'Dr. Banesa', 'General Practice');
+INSERT INTO DOCTORS (doctor_id, name, specialty) VALUES (1, 'Dr. AZE Solide', 'Cardiology');
+INSERT INTO DOCTORS (doctor_id, name, specialty) VALUES (2, 'Dr. Arinatwe Hope', 'General Practice');
 COMMIT;
 /

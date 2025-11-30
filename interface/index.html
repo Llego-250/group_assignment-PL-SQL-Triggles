@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PL/SQL Hospital & Security Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PL/SQL Management System</h1>
+            <p>Team: Abanenatwe Thierry, Hirwa Haguma Hubert, Arinatwe Hope, Aze Solide, Ishema Manzi Bernard</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('security')">Security Monitoring</button>
+            <button class="tab-button" onclick="showTab('hospital')">Hospital Management</button>
+        </div>
+
+        <!-- Security Tab -->
+        <div id="security" class="tab-content active">
+            <h2>Question 3: Suspicious Login Monitoring</h2>
+            
+            <div class="section">
+                <h3>Login Audit System</h3>
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <select id="loginStatus">
+                        <option value="SUCCESS">Success</option>
+                        <option value="FAILED">Failed</option>
+                    </select>
+                    <input type="text" id="ipAddress" placeholder="IP Address">
+                    <button onclick="addLoginAttempt()">Add Login Attempt</button>
+                </div>
+            </div>
+
+            <div class="data-display">
+                <div class="table-section">
+                    <h4>Login Audit Records</h4>
+                    <table id="loginAuditTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                                <th>IP Address</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h4>Security Alerts</h4>
+                    <table id="securityAlertsTable">
+                        <thead>
+                            <tr>
+                                <th>Alert ID</th>
+                                <th>Username</th>
+                                <th>Failed Attempts</th>
+                                <th>Alert Time</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hospital Tab -->
+        <div id="hospital" class="tab-content">
+            <h2>Question 4: Hospital Management System</h2>
+            
+            <div class="section">
+                <h3>Patient Management</h3>
+                <div class="form-group">
+                    <input type="number" id="patientId" placeholder="Patient ID" required>
+                    <input type="text" id="patientName" placeholder="Patient Name" required>
+                    <input type="number" id="patientAge" placeholder="Age" required>
+                    <select id="patientGender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <button onclick="addPatient()">Add Patient</button>
+                    <button onclick="bulkLoadPatients()">Bulk Load Sample Patients</button>
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" id="admitPatientId" placeholder="Patient ID to Admit">
+                    <button onclick="admitPatient()">Admit Patient</button>
+                    <button onclick="showAdmittedCount()">Show Admitted Count</button>
+                </div>
+            </div>
+
+            <div class="data-display">
+                <div class="table-section">
+                    <h4>All Patients</h4>
+                    <table id="patientsTable">
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Admitted Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <h4>Admitted Patients</h4>
+                        <span id="admittedCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

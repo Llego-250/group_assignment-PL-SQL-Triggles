@@ -23,20 +23,25 @@ BEGIN
     ------------------------------------------------
     
     -- Load data into the collection
-    v_new_patients(1).patient_id := 101;
-    v_new_patients(1).name := 'Mary Jones';
-    v_new_patients(1).age := 45;
-    v_new_patients(1).gender := 'Female';
+    v_new_patients(1).patient_id := 27396;
+    v_new_patients(1).name := 'AZE Solide';
+    v_new_patients(1).age := 25;
+    v_new_patients(1).gender := 'Male';
 
-    v_new_patients(2).patient_id := 102;
-    v_new_patients(2).name := 'Ted Miller';
+    v_new_patients(2).patient_id := 28832;
+    v_new_patients(2).name := 'Abanenatwe Thierry';
     v_new_patients(2).age := 62;
     v_new_patients(2).gender := 'Male';
 
-    v_new_patients(3).patient_id := 103;
-    v_new_patients(3).name := 'Sue Kim';
+    v_new_patients(3).patient_id := 28313;
+    v_new_patients(3).name := 'Arinatwe Hope';
     v_new_patients(3).age := 28;
     v_new_patients(3).gender := 'Female';
+
+    v_new_patients(3).patient_id := 28962;
+    v_new_patients(3).name := 'Ishema Manzi Bernard';
+    v_new_patients(3).age := 28;
+    v_new_patients(3).gender := 'Male';
     
     DBMS_OUTPUT.PUT_LINE(CHR(10) || '1. Testing Bulk Load...');
     hospital_mgmt_pkg.bulk_load_patients(v_new_patients);
@@ -50,11 +55,11 @@ BEGIN
     
     -- Admit Patient 101
     hospital_mgmt_pkg.admit_patient(p_patient_id => 101);
-    DBMS_OUTPUT.PUT_LINE('   Patient 101 admitted.');
+    DBMS_OUTPUT.PUT_LINE('   Patient 27369 admitted.');
     
     -- Admit Patient 103
     hospital_mgmt_pkg.admit_patient(p_patient_id => 103);
-    DBMS_OUTPUT.PUT_LINE('   Patient 103 admitted.');
+    DBMS_OUTPUT.PUT_LINE('   Patient 28313 admitted.');
     
     -- Verify the count
     v_admitted_count := hospital_mgmt_pkg.count_admitted;
